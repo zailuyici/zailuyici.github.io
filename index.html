@@ -71,21 +71,7 @@
   <div class="navigation-footer">
     <p class="text">Copyright ©2020 不良研究所导航. All Rights Reserved.</p>
   </div>
-  <script>
-    function checkurl(i){
-      var strU = "http";
-      strU += "://";
-      strU += "";
-      var ul = [
-        'buliang1a@btop',
-        'buliang1a@btop',
-      ];
-      var strU2 = ul[i-1];
-      strU2 = strU2.replace(/a@b/g,'.');
-      strU += strU2;
-      window.open(strU);
-    }
-  </script>
+  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159895294-2"></script>
 <script>
@@ -96,8 +82,7 @@
 </script>
 <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1278851346&web_id=1278851346"></script>
 <!-- 统计，真伪识别 -->
-<script
- src="https://cdnjs.loli.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript">
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript">
 function go(tar){
  if(document.referrer){
   var params = {"linkUserid":10001,"refDomain" : document.referrer,"domain":document.domain,"tarDomain":tar};
@@ -112,14 +97,21 @@ function go(tar){
   });
  }
 }
-$(function() {
- go('');
- $("a").click(function(){
-  var href = $(this).attr('href');
-  if(href && href.startsWith("http")){go(href);}
- });
-});
- 
+$(function() {go('');});
+ function checkurl(i){
+      var strU = "http";
+      strU += "://";
+      strU += "";
+      var ul = [
+        'buliang1a@btop',
+        'buliang1a@btop',
+      ];
+      var strU2 = ul[i-1];
+      strU2 = strU2.replace(/a@b/g,'.');
+      strU += strU2;
+      go(strU)
+      window.open(strU);
+    }
 </script>
 <!-- 统计，真伪识别，结束 -->	
 </body>
